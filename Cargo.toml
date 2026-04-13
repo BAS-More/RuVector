@@ -50,6 +50,7 @@ members = [
     "crates/ruvector-dag-wasm",
     "crates/ruvector-nervous-system-wasm",
     "crates/ruvector-economy-wasm",
+    "crates/ruvector-layoff-trap",
     "crates/ruvector-learning-wasm",
     "crates/ruvector-exotic-wasm",
     "crates/ruvector-attention-unified-wasm",

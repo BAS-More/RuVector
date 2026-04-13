@@ -1,0 +1,29 @@
+[package]
+name = "ruvector-layoff-trap"
+version = "0.1.0"
+edition = "2021"
+authors = ["RuVector Team"]
+license = "MIT"
+description = "Demand-circulation mincut model of the AI Layoff Trap — calibrated on real FRED + BEA data"
+repository = "https://github.com/ruvnet/ruvector"
+keywords = ["economics", "mincut", "automation", "topology", "simulation"]
+categories = ["simulation", "mathematics"]
+
+[lib]
+name = "ruvector_layoff_trap"
+path = "src/lib.rs"
+
+[[bin]]
+name = "layoff-trap-demo"
+path = "src/bin/demo.rs"
+
+[dependencies]
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# HTTP is delegated to the `curl` binary (always present, and avoids the
+# Rust DNS-resolver differences across sandbox environments). This keeps
+# the dep tree minimal for what is fundamentally a research crate.
+
+[dev-dependencies]
+approx = "0.5"
